@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello World");
+﻿using ABRAMYAN1000TASKS;
+Beginner.B1();
