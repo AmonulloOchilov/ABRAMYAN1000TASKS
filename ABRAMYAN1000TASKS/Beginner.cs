@@ -422,7 +422,7 @@ public class Beginner
         double x = (c1*b2 - c2*b1)/d;
         double y = (a1*c2 - a2*c1)/d;
         Console.WriteLine(y);
-        Console.WriteLine(x);
+        Console.WriteLine(x); 
     }
 
 }
