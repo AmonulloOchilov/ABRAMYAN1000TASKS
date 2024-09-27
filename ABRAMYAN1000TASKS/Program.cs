@@ -37,4 +37,39 @@
 //Beginner.B37();
 //Beginner.B38();
 //Beginner.B39();
-Beginner.B40();
+//Beginner.B40();
+
+//the end of the beginner
+//integer
+
+// integers.int1();
+// integers.int2();
+// integers.int3();
+// integers.int4();
+//integers.int5();
+//integers.int6();
+//integers.int7();
+//integers.int8();
+//integers.int9();
+//integers.int10();
+//integers.int11();
+//integers.int12();
+//integers.int13();
+//integers.int14();
+//integers.int15();
+//integers.int16();
+//integers.int17();
+//integers.int18();
+//integers.int19();
+//integers.int20();
+//integers.int21();
+//integers.int22();
+//integers.int23();
+//integers.int24();
+//integers.int25();
+//integers.int26();
+//integers.int27();
+//integers.int28();
+//integers.int29();
+integers.int30();
+
