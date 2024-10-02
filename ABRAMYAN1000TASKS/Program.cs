@@ -40,6 +40,7 @@
 //Beginner.B40();
 
 //the end of the beginner
+
 //integer
 
 // integers.int1();
@@ -71,5 +72,18 @@
 //integers.int27();
 //integers.int28();
 //integers.int29();
-integers.int30();
+//integers.int30();
 
+//the end of the intager
+
+//boolean
+// boolean.bool1();
+// boolean.bool2();
+//boolean.bool3();
+//boolean.bool4();
+//boolean.bool5();
+//boolean.bool6();
+//boolean.bool7();
+//boolean.bool8();
+//boolean.bool9();
+boolean.bool10();
