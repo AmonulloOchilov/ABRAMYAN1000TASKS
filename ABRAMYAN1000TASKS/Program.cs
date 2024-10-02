@@ -86,4 +86,14 @@
 //boolean.bool7();
 //boolean.bool8();
 //boolean.bool9();
-boolean.bool10();
+//boolean.bool10();
+//boolean.bool11();
+//boolean.bool12();
+//boolean.bool13();
+//boolean.bool14();
+//boolean.bool15();
+//boolean.bool16();
+//boolean.bool17();
+//boolean.bool18();
+//boolean.bool19();
+boolean.bool20();
