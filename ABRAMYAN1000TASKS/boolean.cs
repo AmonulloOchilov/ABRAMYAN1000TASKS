@@ -225,5 +225,68 @@ public class boolean
         bool d = (a != b) && (b != c) && (c != a);
         Console.WriteLine(d);
     }
-    
+    //Given a three-digit integer, verify the following proposition: ―All digits
+    // of the number are in ascending order‖
+    public static void bool21()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+
+        bool d = (a <= b && b <= c);
+        Console.WriteLine(d);
+    }
+    //Given a three-digit integer, verify the following proposition: ―All digits
+    // of the number are in ascending or descending order‖
+    public static void bool22()
+    {
+        var a = int.Parse(Console.ReadLine());
+
+        int h = a / 100; //hundreds
+        int t = (a / 10) % 10; //tens
+        int o = a % 10; //ones
+
+        bool ac = (h < t && t < o);
+        bool dc = (h > t && t > 0);
+        Console.WriteLine(ac || dc);
+    }
+    //Given a four-digit integer, verify the following proposition: ―The
+    // number is read equally both from left to right and from right to left
+    public static void bool23()
+    {
+        var a = int.Parse(Console.ReadLine());
+
+        int th = a / 1000; //thousands
+        int h = (a / 100) % 10; //hundreds
+        int t = (a / 10) % 10; //tens
+        int o = a % 10; //ones
+        
+        bool eq = (th == o && h == t);
+        Console.WriteLine(eq);
+    }
+    //Three real numbers A, B, C are given (A is not equal to 0). By means of
+    // a discriminant D = B2
+    // − 4·A·C, verify the following proposition: ―The
+    // quadratic equation A·x
+    // 2 + B·x + C = 0 has real roots‖
+    public static void bool24()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+
+        int d = b * b - 4 * a * c;
+        bool f = d >= 0;
+        Console.WriteLine(f);
+    }
+    //Given two real numbers x, y, verify the following proposition: ―The
+    // point with coordinates (x, y) is in the second coordinate quarter‖
+    public static void bool25()
+    {
+        var x = int.Parse(Console.ReadLine());
+        var y = int.Parse(Console.ReadLine());
+
+        bool f = (x < 0) && (y > 0);
+        Console.WriteLine(f);
+    }
 }

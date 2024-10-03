@@ -96,4 +96,9 @@
 //boolean.bool17();
 //boolean.bool18();
 //boolean.bool19();
-boolean.bool20();
+//boolean.bool20();
+//boolean.bool21();
+//boolean.bool22();
+//boolean.bool23();
+//boolean.bool24();
+boolean.bool25();
