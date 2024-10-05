@@ -470,5 +470,5 @@ public class boolean
 
         bool a = (dx == 1 && dy == 2) || (dx == 2 && dy == 1);
         Console.WriteLine(a);
-    }
+    } 
 }
