@@ -289,4 +289,186 @@ public class boolean
         bool f = (x < 0) && (y > 0);
         Console.WriteLine(f);
     }
+    //Given two real numbers x, y, verify the following proposition: ―The
+    // point with coordinates (x, y) is in the fourth coordinate quarter
+    public static void bool26()
+    {
+        var x = int.Parse(Console.ReadLine());
+        var y = int.Parse(Console.ReadLine());
+
+        bool f = (x > 0) && (y < 0);
+        Console.WriteLine(f);
+    }
+    //Given two real numbers x, y, verify the following proposition: ―The
+    // point with coordinates (x, y) is in the second or third coordinate quarter‖
+    public static void bool27()
+    {
+        var x = int.Parse(Console.ReadLine());
+        var y = int.Parse(Console.ReadLine());
+
+        bool f = ((x < 0) && (y > 0)) || ((x < 0) && (y < 0));
+        Console.WriteLine(f);
+    }
+    //Given two real numbers x, y, verify the following proposition: ―The
+    // point with coordinates (x, y) is in the first or third coordinate quarter
+    public static void bool28()
+    {
+        var x = int.Parse(Console.ReadLine());
+        var y = int.Parse(Console.ReadLine());
+
+        bool f = ((x > 0) && (y > 0)) || ((x < 0) && (y < 0));
+        Console.WriteLine(f);
+    }
+    //Given real numbers x, y, x1, y1, x2, y2, verify the following proposition:
+    // ―The point (x, y) is inside of the rectangle whose left top vertex is (x1, y1), right
+    // bottom vertex is (x2, y2), and sides are parallel to coordinate axes‖
+    public static void bool29()
+    {
+        var x = int.Parse(Console.ReadLine());
+        var y = int.Parse(Console.ReadLine());
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+        
+        bool isInside = (Math.Min(x1, x2) < x && x < Math.Max(x1, x2) && Math.Min(y1, y2) < y && y < Math.Max(y1, y2));
+        Console.WriteLine(isInside);
+    }
+    //Given three integers a, b, c that are the sides of a triangle, verify the
+    // following proposition: ―The triangle with sides a, b, c is equilateral‖
+    public static void bool30()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+
+        bool f = (a == b) && (b == c);
+        Console.WriteLine(f);
+    }
+    //Given three integers a, b, c that are the sides of a triangle, verify the
+    // following proposition: ―The triangle with sides a, b, c is isosceles‖
+    public static void bool31()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+
+        bool f = (a == b || a == c || b == c);
+        Console.WriteLine(f);
+    }
+    //Given three integers a, b, c that are the sides of a triangle, verify the
+    // following proposition: ―The triangle with sides a, b, c is a right triangle‖
+    public static void bool32()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+        
+        bool d = (a*a + b*b == c*c) || (a*a + c*c == b*b) || (b*b + c*c == a*a);
+        Console.WriteLine(d);
+    }
+    //Given three integers a, b, c, verify the following proposition: ―A triangle
+    // with the sides a, b, c exists‖
+    public static void bool33()
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+
+        bool d = (a + b > c) && (a + c > b) && (b + c > a);
+        Console.WriteLine(d);
+    }
+    //Given coordinates x, y of a chessboard square (as integers in the range 1
+    // to 8), verify the following proposition: ―The chessboard square (x, y) is white‖
+    // .
+    // Note that the left bottom square (1, 1) is black
+    public static void bool34()
+    {
+        var x = int.Parse(Console.ReadLine());
+        var y = int.Parse(Console.ReadLine());
+
+        bool f = (x + y) % 2 == 0;
+        Console.WriteLine(f);
+    }
+    //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
+    // the range 1 to 8), verify the following proposition: ―Both of the given
+    // chessboard squares have the same color‖
+    public static void bool35()
+    {
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+
+        bool f = ((x1 + y1) % 2 == (x2 + y2) % 2);
+        Console.WriteLine(f);
+    }
+    //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
+    // the range 1 to 8), verify the following proposition: ―A rook can move from one
+    // square to another during one turn‖
+    public static void bool36()
+    {
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+        
+        bool f = (x1==x2) || (y1==y2);
+        Console.WriteLine(f);
+    }
+    //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
+    // the range 1 to 8), verify the following proposition: ―A king can move from one
+    // square to another during one turn‖
+    public static void bool37()
+    {
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+
+        bool f = Math.Abs(x1 - x2) <= 1 && Math.Abs(y1 - y2) <= 1;
+        Console.WriteLine(f);
+    }
+    //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
+    // the range 1 to 8), verify the following proposition: ―A bishop can move from
+    // one square to another during one turn‖
+    public static void bool38()
+    {
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+        
+        bool f = Math.Abs(x1 - x2) == Math.Abs(y1 - y2);
+        Console.WriteLine(f);
+    }
+    //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
+    // the range 1 to 8), verify the following proposition: ―A queen can move from
+    // one square to another during one turn‖
+    public static void bool39()
+    {
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+        
+        bool f = (x1 == x2) || (y1 == y2) || (Math.Abs(x1 - x2) == Math.Abs(y1 - y2));
+        Console.WriteLine(f);
+    }
+    //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
+    // the range 1 to 8), verify the following proposition: ―A knight can move from
+    // one square to another during one turn‖
+    public static void bool40()
+    {
+        var x1 = int.Parse(Console.ReadLine());
+        var y1 = int.Parse(Console.ReadLine());
+        var x2 = int.Parse(Console.ReadLine());
+        var y2 = int.Parse(Console.ReadLine());
+        
+        int dx = Math.Abs(x1 - x2);
+        int dy = Math.Abs(y1 - y2);
+
+        bool a = (dx == 1 && dy == 2) || (dx == 2 && dy == 1);
+        Console.WriteLine(a);
+    }
 }

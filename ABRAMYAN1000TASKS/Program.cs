@@ -74,7 +74,7 @@
 //integers.int29();
 //integers.int30();
 
-//the end of the intager
+//the end of the integer
 
 //boolean
 // boolean.bool1();
@@ -101,4 +101,21 @@
 //boolean.bool22();
 //boolean.bool23();
 //boolean.bool24();
-boolean.bool25();
+//boolean.bool25();
+//boolean.bool26();
+//boolean.bool27();
+//boolean.bool28();
+//boolean.bool29();
+//boolean.bool30();
+//boolean.bool31();
+//boolean.bool32();
+//boolean.bool33();
+//boolean.bool34();
+//boolean.bool35();
+//boolean.bool36();
+//boolean.bool37();
+//boolean.bool38();
+//boolean.bool39();
+//boolean.bool40();
+
+//The end of the bool
