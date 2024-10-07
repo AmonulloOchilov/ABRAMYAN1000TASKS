@@ -119,3 +119,18 @@
 //boolean.bool40();
 
 //The end of the bool 
+
+//Condition.if1();
+//Condition.if2();
+//Condition.if3();
+ //Condition.if4();
+// Condition.if5();
+//Condition.if6();
+ //Condition.if7();
+//Condition.if8();
+//Condition.if9();
+//Condition.if10();
+//Condition.if11();
+//Condition.if12();
+//Condition.if13();
+Condition.if14();
