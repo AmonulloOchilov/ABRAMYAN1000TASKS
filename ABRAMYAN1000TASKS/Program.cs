@@ -152,3 +152,12 @@
 //Condition.if30();
 
 //The end of the Condition
+
+//Selection:
+//Selection.sc1();
+//Selection.sc2();
+//Selection.sc3();
+//Selection.sc4();
+//Selection.sc5();
+//Selection.sc6();
+Selection.sc7();
