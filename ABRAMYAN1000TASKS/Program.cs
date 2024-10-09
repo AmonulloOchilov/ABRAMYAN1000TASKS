@@ -160,4 +160,12 @@
 //Selection.sc4();
 //Selection.sc5();
 //Selection.sc6();
-Selection.sc7();
+//Selection.sc7();
+//Selection.sc8();
+//Selection.sc9();
+//Selection.sc10();
+//Selection.sc11();
+//Selection.sc12();
+//Selection.sc13();
+//Selection.sc19();
+Selection.sc20();
