@@ -166,4 +166,45 @@ public class loop
         }
         Console.WriteLine(sum);
     }
+    //An integer N (> 1) and two points A, B (A < B) on the real axis are given. The
+    // segment [A, B] is divided into N sub-segments of equal length. Output the
+    // length H of each sub-segment and then output the values of a function
+    // F(X) = 1 − sin(X) at points dividing the segment [A, B]:
+    // F(A), F(A + H), F(A + 2·H), …, F(B).
+    public static void l30()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+
+        double h = (b - a) / n;
+        Console.WriteLine(h);
+
+        for (int i = 0; i <= n; i++)
+        {
+            double x = a + i * h;
+            double fx = 1 - Math.Sin(x);
+            Console.WriteLine(x);
+            Console.WriteLine(fx);
+        }
+        
     }
+    //An integer N (> 0) is given. A sequence of real numbers AK is defined as:
+    // A0 = 2, AK = 2 + 1/AK−1, K = 1, 2, … .
+    // Output terms A1, A2, …, AN of the sequence.
+    public static void l31()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        double pt = 2;
+
+        for (int i = 1; i <= n; i++)
+        {
+            double ct = 2 + (1 / pt);
+            Console.WriteLine(ct);
+            pt = ct;
+        }
+    }
+    
+    
+}
