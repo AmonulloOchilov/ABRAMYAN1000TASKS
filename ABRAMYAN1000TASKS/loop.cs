@@ -275,6 +275,88 @@ public class loop
             a3 = ct;
         }
     }
-    
-    
+    //For36. Given positive integers N and K, find the sum
+    // 1K + 2K + … + NK
+    // .
+    // To avoid the integer overflow, compute the sum using real variables and
+    // output the result as a real number.
+    public static void l36()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int k = int.Parse(Console.ReadLine());
+        double sum = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            double ct = Math.Pow(i, k);
+            sum += ct;
+        }
+        Console.WriteLine(sum);
+    }
+    //For37. Given an integer N (> 0), find the sum
+    // 11 + 22 + … + NN
+    // .
+    // To avoid the integer overflow, compute the sum using real variables and
+    // output the result as a real number.
+    public static void l37()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double sum = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            double ct = Math.Pow(i, i);
+            sum += ct;
+        }
+        Console.WriteLine(sum);
+    }
+    //Given an integer N (> 0), find the sum
+    // 1N + 2N−1 + … + N1
+    // .
+    // To avoid the integer overflow, compute the sum using real variables and
+    // output the result as a real number.
+    public static void l38()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double sum = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            double ct = Math.Pow(i, n-i+1);
+            sum += ct;
+        }
+        Console.WriteLine(sum);
+    }
+    //For39. Positive integers A and B (A < B) are given. Output all integers in the range A
+    // to B, with an integer of a value K being output K times (for example, the
+    // number 3 must be output 3 times).
+    public static void l39()
+    {
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+
+        for (int i = a; i <= b; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+    //Integers A and B (A < B) are given. Output all integers in the range A to B,
+    // with the number A being output once, the number A + 1 being output twice,
+    // and so on.
+    public static void l40()
+    {
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+
+        for (int i = a; i <= b; i++)
+        {
+            for (int j = 1; j <= (i - a + 1); j++) 
+            {
+                Console.WriteLine(i);    
+            }
+        }
+    }
 }
