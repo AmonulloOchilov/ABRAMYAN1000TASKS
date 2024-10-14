@@ -206,6 +206,75 @@ public class loop
         }
     }
     
+    //An integer N (> 0) is given. A sequence of real numbers AK is defined as:
+    // A0 = 1, AK = (AK−1 + 1)/K, K = 1, 2, … .
+    // Output terms A1, A2, …, AN of the sequence.
+    public static void l32()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double pt = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            double ct = (pt + 1) / i;
+            Console.WriteLine(ct);
+            pt = ct;
+        }
+    }
+    //An integer N (> 0) is given. An integer-valued sequence of the Fibonacci
+    // numbers FK is defined as:
+    // F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, … .
+    // Output terms F1, F2, …, FN of the sequence.
+    public static void l33()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double f1 = 1;
+        double f2 = 1;
+        Console.WriteLine(f1 + "\n" + f2);
+        for (int i = 2; i < n; i++)
+        {
+            double fn = f1 + f2;
+            Console.WriteLine(fn);
+            f1 = f2;
+            f2 = fn;
+        }
+    }
+    //An integer N (> 1) is given. A sequence of real numbers AK is defined as:
+    // A1 = 1, A2 = 2, AK = (AK−2 + 2·AK−1)/3, K = 3, 4, … .
+    // Output terms A1, A2, …, AN of the sequence.
+    public static void l34()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double a1 = 1;
+        double a2 = 2;
+        Console.WriteLine(a1 + "\n" + a2);
+        for (int i = 3; i <= n; i++)
+        {
+            double ct = (a2 + 2 * a1) / 3;
+            Console.WriteLine(ct);
+            a1 = a2;
+            a2 = ct;
+        }
+    }
+    //For35. An integer N (> 2) is given. A sequence of integers AK is defined as:
+    // A1 = 1, A2 = 2, A3 = 3, AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, … .
+    // Output terms A1, A2, …, AN of the sequence.
+    public static void l35()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double a1 = 1;
+        double a2 = 2;
+        double a3 = 3;
+        Console.WriteLine(a1 + "\n" + a2 + "\n" + a3);
+
+        for (int i = 4; i <= n; i++)
+        {
+            double ct = a1 + a2 - 2 * a3;
+            Console.WriteLine(ct);
+            a1 = a2;
+            a2 = a3;
+            a3 = ct;
+        }
+    }
     
     
 }
