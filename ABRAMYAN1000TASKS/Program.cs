@@ -198,3 +198,25 @@
 //loop.l40();
 
 //the end of the for loop;
+
+//cloop.cl1();
+//cloop.cl2();
+//cloop.cl3();
+//cloop.cl4();
+//cloop.cl5();
+//cloop.cl6();
+//cloop.cl7();
+//cloop.cl8();
+//cloop.cl9();
+//cloop.cl10();
+//cloop.cl20();
+//cloop.cl21();
+//cloop.cl22();
+//cloop.cl23();
+//cloop.cl24();
+//cloop.cl25();
+//cloop.cl26();
+// //cloop.cl27();
+// cloop.cl28();
+// cloop.cl29();
+cloop.cl30();
