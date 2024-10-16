@@ -222,3 +222,6 @@
 // cloop.cl30();
 
 // the end of the cloop;
+
+//procedure.procedure1();
+procedure.procedure2();
