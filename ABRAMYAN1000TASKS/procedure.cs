@@ -194,6 +194,30 @@ public class procedure
         Console.WriteLine($"For number {k2}: Digit Count = {c2}, Digit Sum = {s2}");
         Console.WriteLine($"For number {k3}: Digit Count = {c3}, Digit Sum = {s3}");
         Console.WriteLine($"For number {k4}: Digit Count = {c4}, Digit Sum = {s4}");
-        
+    }
+    //Proc7. Write a procedure InvDigits(K) that inverts the order of digits of a positive
+    // integer K (K is an input and output integer parameter). Using this procedure,
+    // invert the order of digits for each of five given integers.
+    static void InvDigits(int k, out int k1)
+    {
+        int s = 0;
+        while (k > 0)
+        {
+           int digit = k % 10;
+           s = s * 10 + digit;
+           k /= 10;
+           
+        }
+        k1 = s;
+    }
+
+    public static void procedure7()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            int a = int.Parse(Console.ReadLine());
+            InvDigits(a, out int k1);
+            Console.WriteLine($"Original {a}, Inverted {k1}");
+        }
     }
 }
