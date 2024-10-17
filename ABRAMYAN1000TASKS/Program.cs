@@ -224,4 +224,8 @@
 // the end of the cloop;
 
 //procedure.procedure1();
-procedure.procedure2();
+// procedure.procedure2();
+// procedure.procedure3();
+// procedure.procedure4();
+// procedure.procedure5();
+procedure.procedure6();
