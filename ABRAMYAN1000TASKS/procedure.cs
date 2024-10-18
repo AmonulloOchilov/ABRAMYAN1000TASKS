@@ -449,5 +449,103 @@ public class procedure
         Console.WriteLine($"c^p = {cp}");
         
     }
-    
+    //Proc40. Write a real-valued function Exp1(x, ε) (x and ε are real numbers, ε > 0) that
+    // returns an approximate value of the function exp(x) defined as follows:
+    // exp(x) = 1 + x + x
+    // 2/(2!) + x
+    // 3/(3!) + … + x
+    // n/(n!) + …
+    // (n! = 1·2·…·n). Stop adding new terms to the sum when the value of the next
+    // term will be less than ε. Using this function, find the approximate values of the
+    // function exp(x) at a given point x for six given ε
+
+    static double exp1(double x, double e)
+    {
+        double sum = 1;
+        double term = 1;
+        int n = 1;
+        while (Math.Abs(term) >= e)
+        {
+            term *= x / n;
+            sum += term;
+            n++;
+        }
+
+        return sum;
+    }
+
+    public static void procedure40()
+    {
+        double x = double.Parse(Console.ReadLine());
+        for (int i = 0; i < 6; i++)
+        {
+            double e = double.Parse(Console.ReadLine());
+            double result = exp1(x, e);
+            
+            Console.WriteLine($"exp({x}) = {result} for epsilon {e}");
+        }
+    }
+    //Proc56. Write a real-valued function Leng(xA, yA, xB, yB) that returns the length of a
+    // segment AB with given coordinates of its endpoints:
+    // |AB| = ((xA − xB)2 + (yA − yB)2)1/2
+    // (xA, yA, xB, yB are real-valued parameters). Using this function, find the lengths
+    // of segments AB, AC, AD provided that coordinates of points A, B, C, D are
+    // given.
+    static double leng(double xa, double ya, double xb, double yb)
+    {
+        return Math.Sqrt(Math.Pow(xa - xb, 2) + Math.Pow(ya - yb, 2));
+    }
+
+    public static void procedure56()
+    {
+        double xa = double.Parse(Console.ReadLine());
+        double ya = double.Parse(Console.ReadLine());
+        double xb = double.Parse(Console.ReadLine());
+        double yb = double.Parse(Console.ReadLine());
+        double xc = double.Parse(Console.ReadLine());
+        double yc = double.Parse(Console.ReadLine());
+        double xd = double.Parse(Console.ReadLine());
+        double yd = double.Parse(Console.ReadLine());
+
+        double AB = leng(xa, ya, xb, yb);
+        double AC = leng(xa, ya, xc, yc);
+        double AD = leng(xa, ya, xd, yd);
+        
+        Console.WriteLine($"AB = {AB}");
+        Console.WriteLine($"AC = {AC}");
+        Console.WriteLine($"AD = {AD}");
+        
+    }
+    //Proc57. Using the Leng function from the task Proc56, write a real-valued function
+    // Perim(xA, yA, xB, yB, xC, yC) that returns the perimeter of a triangle ABC with
+    // given coordinates of its vertices (xA, yA, xB, yB, xC, yC are real-valued
+    // parameters). Using the Perim function, find the perimeters of triangles ABC,
+    // ABD, ACD provided that coordinates of points A, B, C, D are given.
+    static double perim(double xa, double ya, double xb, double yb, double xc, double yc)
+    {
+        double ab = leng(xa, ya, xb, yb);
+        double bc = leng(xb, yb, xc, yc);
+        double ca = leng(xc, yc, xa, ya);
+        return ab + bc + ca;
+    }
+
+    public static void procedure57()
+    {
+        double xa = double.Parse(Console.ReadLine());
+        double ya = double.Parse(Console.ReadLine());
+        double xb = double.Parse(Console.ReadLine());
+        double yb = double.Parse(Console.ReadLine());
+        double xc = double.Parse(Console.ReadLine());
+        double yc = double.Parse(Console.ReadLine());
+        double xd = double.Parse(Console.ReadLine());
+        double yd = double.Parse(Console.ReadLine());
+        
+        double pABC = perim(xa, ya, xb, yb, xc, yc);
+        double pABD = perim(xa, ya, xb, yb, xd, yd);
+        double pACD = perim(xa, ya, xc, yc, xd, yd);
+        
+        Console.WriteLine($"Perimeter of triangle ABC: {pABC}");
+        Console.WriteLine($"Perimeter of triangle ABD: {pABD}");
+        Console.WriteLine($"Perimeter of triangle ACD: {pACD}");
+    }
 }
