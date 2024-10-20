@@ -544,8 +544,9 @@ public class procedure
         double pABD = perim(xa, ya, xb, yb, xd, yd);
         double pACD = perim(xa, ya, xc, yc, xd, yd);
         
-        Console.WriteLine($"Perimeter of triangle ABC: {pABC}");
-        Console.WriteLine($"Perimeter of triangle ABD: {pABD}");
-        Console.WriteLine($"Perimeter of triangle ACD: {pACD}");
+        Console.WriteLine($"Perimeter of ABC: {pABC}");
+        Console.WriteLine($"Perimeter of ABD: {pABD}");
+        Console.WriteLine($"Perimeter of ACD: {pACD}");
     }
+    
 }

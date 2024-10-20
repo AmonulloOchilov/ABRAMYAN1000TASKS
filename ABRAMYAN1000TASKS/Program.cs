@@ -241,4 +241,17 @@
 // procedure.procedure37();
 // procedure.procedure40();
 // procedure.procedure56();
-procedure.procedure57();
+// procedure.procedure57();
+
+//the of the half end of proc
+
+// sequences.s1();
+// sequences.s2();
+// sequences.s3();
+// sequences.s4();
+// sequences.s5();
+// sequences.s6();
+// sequences.s7();
+// sequences.s8();
+// sequences.s9();
+sequences.s10();
