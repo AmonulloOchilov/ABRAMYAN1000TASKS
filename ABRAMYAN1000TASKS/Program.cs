@@ -254,4 +254,17 @@
 // sequences.s7();
 // sequences.s8();
 // sequences.s9();
-sequences.s10();
+// sequences.s10();
+// sequences.s26();
+// sequences.s31();
+// sequences.s32();
+// sequences.s33();
+// sequences.s34();
+// sequences.s35();
+ // sequences.s36();
+// sequences.s37();
+// sequences.s38();
+// sequences.s39();
+// sequences.s40();
+
+//the of the half end of sequences
