@@ -451,4 +451,205 @@ public class minmax
         }
         Console.WriteLine($"{minin1 + 1} {minin2 + 1}");
     }
+    //Minmax26. An integer N and a sequence of N integers are given. Output the maximal
+    // amount of successive elements whose values are even numbers. If the
+    // sequence does not contain even numbers then output 0.
+    public static void mn26()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int maxCount = 0;
+        int currentCount = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            int number = int.Parse(Console.ReadLine());
+
+            if (number % 2 == 0)
+            {
+                currentCount++;
+            }
+            else
+            {
+                if (currentCount > maxCount)
+                {
+                    maxCount = currentCount;
+                }
+                currentCount = 0;
+            }
+        }
+
+        if (currentCount > maxCount)
+        {
+            maxCount = currentCount;
+        }
+
+        Console.WriteLine(maxCount);
+    }
+    //Minmax27. An integer N and a sequence of N integers are given. The sequence
+    // contains elements of values 0 and 1 only. Find the longest subsequence of the
+    // successive elements with equal values, and output the order number of its
+    // initial element and the amount of its elements. If there are several such
+    // subsequences then output the order number of the first one.
+    public static void mn27()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int prev = int.Parse(Console.ReadLine());
+
+        int maxCount = 1;
+        int currentCount = 1;
+        int startIndex = 1;
+        int bestStartIndex = 1;
+
+        for (int i = 2; i <= n; i++)
+        {
+            int current = int.Parse(Console.ReadLine());
+
+            if (current == prev)
+            {
+                currentCount++;
+            }
+            else
+            {
+                if (currentCount > maxCount)
+                {
+                    maxCount = currentCount;
+                    bestStartIndex = startIndex;
+                }
+                currentCount = 1;
+                startIndex = i;
+            }
+
+            prev = current;
+        }
+
+        if (currentCount > maxCount)
+        {
+            maxCount = currentCount;
+            bestStartIndex = startIndex;
+        }
+
+        Console.WriteLine($"{bestStartIndex} {maxCount}");
+    }
+        //Minmax28. An integer N and a sequence of N integers are given. The sequence
+        // contains elements of values 0 and 1 only. Find the longest subsequence of the
+        // successive elements of value 1, and output the order number of its initial
+        // element and the amount of its elements. If there are several such subsequences
+        // then output the order number of the first one. If the sequence does not contain
+        // elements of value 1 then output 0 twice.
+        public static void mn28()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int maxCount = 0;
+            int currentCount = 0;
+            int startIndex = -1;
+            int bestStartIndex = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int current = int.Parse(Console.ReadLine());
+
+                if (current == 1)
+                {
+                    if (currentCount == 0)
+                    {
+                        startIndex = i; 
+                    }
+                    currentCount++;
+                }
+                else
+                {
+                    if (currentCount > maxCount)
+                    {
+                        maxCount = currentCount;
+                        bestStartIndex = startIndex;
+                    }
+                    currentCount = 0; 
+                }
+            }
+
+            if (currentCount > maxCount)
+            {
+                maxCount = currentCount;
+                bestStartIndex = startIndex;
+            }
+
+            if (maxCount > 0)
+            {
+                Console.WriteLine($"{bestStartIndex} {maxCount}");
+            }
+            else
+            {
+                Console.WriteLine("0 0");
+            }
+        }
+        //Minmax29. An integer N and a sequence of N integers are given. Find the maximal
+        // amount of the successive elements with the minimal value.
+        public static void mn29()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int minValue = int.MaxValue;
+            int maxCount = 0;
+            int currentCount = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int current = int.Parse(Console.ReadLine());
+
+                if (current < minValue)
+                {
+                    minValue = current;
+                    currentCount = 1;
+                    maxCount = 1;
+                }
+                else if (current == minValue)
+                {
+                    currentCount++;
+                    if (currentCount > maxCount)
+                    {
+                        maxCount = currentCount;
+                    }
+                }
+                else
+                {
+                    currentCount = 0;
+                }
+            }
+
+            Console.WriteLine(maxCount);
+        }
+        //Minmax30. An integer N and a sequence of N integers are given. Find the minimal
+        // amount of the successive elements with the maximal value.
+        public static void mn30()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int maxValue = int.MinValue;
+            int minCount = int.MaxValue;
+            int currentCount = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int current = int.Parse(Console.ReadLine());
+
+                if (current > maxValue)
+                {
+                    maxValue = current;
+                    currentCount = 1;
+                    minCount = 1;
+                }
+                else if (current == maxValue)
+                {
+                    currentCount++;
+                    if (currentCount < minCount)
+                    {
+                        minCount = currentCount;
+                    }
+                }
+                else
+                {
+                    currentCount = 0;
+                }
+            }
+
+            Console.WriteLine(minCount);
+        }
 }

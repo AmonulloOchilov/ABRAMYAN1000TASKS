@@ -284,4 +284,11 @@
 // minmax.mn22();
 // minmax.mn23();
 // minmax.mn24();
-minmax.mn25();
+// minmax.mn25();
+// minmax.mn26();
+// minmax.mn27();
+// minmax.mn28();
+// minmax.mn29();
+// minmax.mn30();
+
+//The end of the minmax.mn
