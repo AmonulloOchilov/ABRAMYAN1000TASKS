@@ -268,3 +268,20 @@
 // sequences.s40();
 
 //the of the half end of sequences
+
+// minmax.mn1();
+// minmax.mn2();
+// minmax.mn3();
+// minmax.mn4();
+// minmax.mn5();
+// minmax.mn6();
+// minmax.mn7();
+// minmax.mn8();
+// minmax.mn9();
+// minmax.mn10();
+// minmax.mn20();
+// minmax.mn21();
+// minmax.mn22();
+// minmax.mn23();
+// minmax.mn24();
+minmax.mn25();
