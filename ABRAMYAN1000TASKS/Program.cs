@@ -292,3 +292,10 @@
 // minmax.mn30();
 
 //The end of the minmax.mn
+
+// arrays.arr1();
+// arrays.arr2();
+// arrays.arr3();
+// arrays.arr4();
+// arrays.arr5();
+arrays.arr6();
