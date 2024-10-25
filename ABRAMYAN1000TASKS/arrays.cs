@@ -134,4 +134,124 @@ public class arrays
             Console.WriteLine(arr[i]);
         }
     }
+    
+    //Array7. Given an array of N real numbers, output its elements in inverse order.
+    public static void arr7()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double[] arr = new Double[n];
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = double.Parse(Console.ReadLine());
+        }
+        Array.Reverse(arr);
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine(arr[i]);
+        }
+    }
+    //Array8. Given an array of N integers, output all odd numbers contained in the array
+    // in ascending order of their indices. Also output the amount K of odd numbers
+    // contained in the array.
+    public static void arr8()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        int k = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+            if (arr[i] % 2 != 0)
+            {
+                Console.WriteLine(arr[i]);
+                k++;
+            }   
+        }
+        Console.WriteLine(k);
+    }
+    //Array9. Given an array of N integers, output all even numbers contained in the array
+    // in descending order of their indices. Also output the amount K of even
+    // numbers contained in the array.
+    public static void arr9()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+
+        int k = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = int.Parse(Console.ReadLine());
+            
+            if (arr[i] % 2 == 0)
+            {
+                k++;
+            }
+        }
+
+        for (int i = n-1; i >=0; i--)
+        {
+            if (arr[i] % 2 == 0)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+        Console.WriteLine(k);
+    }
+    //Array10. Given an array of N integers, output all even numbers contained in the array
+    // in ascending order of their indices and then output all odd numbers contained
+    // in the array in descending order of their indices.
+    public static void arr10()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        int aceven = 0;
+        int decodd = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+            if (arr[i] % 2 == 0)
+            {
+                Console.WriteLine($"Acending even order = {arr[i]}");
+                aceven++;
+            }
+            else
+            {
+                decodd++;
+            }
+        }
+        Console.WriteLine($"Amount of aceven = {aceven}");
+        
+        for (int i = n-1; i >=0; i--)
+        {
+            if (arr[i] % 2 != 0)
+            {
+                Console.WriteLine($"Decending odd order = {arr[i]}");
+            }
+        }
+        Console.WriteLine($"Amount of decodd = {decodd}");
+    }
+    //Array11. An array A of N real numbers and an integer K (1 ≤ K ≤ N) are given.
+    // Output array elements with order numbers that are multiples of K: AK, A2·K,
+    // A3·K, … . Do not use conditional statements.
+    public static void arr11()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double[] a = new double[n];
+        int k = int.Parse(Console.ReadLine());
+        
+        for (int i = 0; i < n; i++) 
+        {
+            a[i] = double.Parse(Console.ReadLine());
+        }
+        for (int i = 1; i <= n / k; i++)
+        {
+            Console.WriteLine(a[i * k - 1]);
+        }
+    }
 }
