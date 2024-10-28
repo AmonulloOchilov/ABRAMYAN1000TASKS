@@ -41,8 +41,8 @@ public class Beginner
     public static void B5()
     {
         var a = double.Parse(Console.ReadLine());
-        
-        Console.WriteLine("Volume = " + a * a);
+
+        Console.WriteLine("Volume = " + a * a * a);
         Console.WriteLine("Area = " + 6 * a);
     }
     //The edges a, b, c of a right parallelepiped are given. Find the volume
@@ -55,68 +55,87 @@ public class Beginner
     var c = double.Parse(Console.ReadLine());
     
     Console.WriteLine("Volume = " + a * b * c);
-    Console.WriteLine("Area = " + 2 * (a *b + b * c + a * b));
+    Console.WriteLine("Area = " + 2 * (a * b + b * c + a * c));
     }
-
+    
+    //Begin7. Given the radius R of a circle, find the length L of the circumference and the
+    // area S of the circle:
+    // L = 2·π·R, S = π·R2
+    // .
+    // Use 3.14 for a value of π.
     public static void B7()
     {
         var r = double.Parse(Console.ReadLine());
         float p = 3.14F;
         Console.WriteLine("Length = " + 2*p*r);
         Console.WriteLine("Area = " + (p * (r * r)));
-        
-        
     }
-
+    //Begin8. Given two numbers a and b, find their average: (a + b)/2.
     public static void B8()
     {
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
-        Console.WriteLine("Average = " + (a + b) / a);
+        Console.WriteLine("Average = " + (a + b) / 2);
     }
-
+    //Begin9. Given two nonnegative numbers a and b, find their geometrical mean (a
+    // square root of their product): (a·b)1/2
+    // .
     public static void B9()
     {
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
         Console.WriteLine("Sqrt = " + Math.Sqrt(a * b));
     }
-
+    //Begin10. Two nonzero numbers are given. Find the sum, the difference, the product,
+    // and the quotient of their squares.
     public static void B10()
     {
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
-        Console.WriteLine("Sum = " + (a + b));
-        Console.WriteLine("Sub = " + (a - b));
-        Console.WriteLine("Div = " + (a / b));
-        Console.WriteLine("SuOfSq = " + (a * a + b * b));
+        Console.WriteLine((a*a + b*b));
+        Console.WriteLine((a*a - b*b));
+        Console.WriteLine((a*a * b*b));
+        Console.WriteLine((a*a / b*b));
     }
-
+    //Begin12. The legs a and b of a right triangle are given. Find the hypotenuse c and the
+    // perimeter P of the triangle:
+    // c = (a2 + b2)1/2
+    // , P = a + b + c.
     public static void B12()
     {
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
         double c = Math.Sqrt(a*a + b*b);
-        Console.WriteLine("C = " + c);
+        Console.WriteLine(c);
         double p = a + b + c;
-        Console.WriteLine("P = " + p);
-
-
+        Console.WriteLine(p);
+        
     }
-
+//Begin13. Given the radiuses R1 and R2 of two concentric circles (R1 > R2), find the
+// areas S1 and S2 of the circles and the area S3 of the ring bounded by the circles:
+// S1 = π·(R1)2
+// , S2 = π·(R2)2
+// , S3 = S1 − S2.
+// Use 3.14 for a value of π.
     public static void B13()
     {
         var r1 = double.Parse(Console.ReadLine());
         var r2 = double.Parse(Console.ReadLine());
         double p = 3.14;
+        
         double s1 = p * (r1 * r1);
         Console.WriteLine(s1);
+        
         double s2 = p * (r2 * r2);
         Console.WriteLine(s2);
+        
         double s3 = s1 - s2;
         Console.WriteLine(s3);
     }
-
+    
+    //Begin14. Given the length L of a circumference, find the radius R and the area S of
+    // the circle. Take into account that L = 2·π·R, S = π·R2. Use 3.14 for a value
+    // of π.
     public static void B14()
     {
         var r = double.Parse(Console.ReadLine());
@@ -124,44 +143,57 @@ public class Beginner
         Console.WriteLine(2 * p * r);
         Console.WriteLine(p * r * r);
     }
-
+    
+    //Begin15. Given the area S of a circle, find the diameter D and the length L of the
+    // circumference. Take into account that L = π·D, S = π·D2/4. Use 3.14 for a
+    // value of π.
     public static void B15()
     {
         var s = double.Parse(Console.ReadLine());
-        float p = 3.14F;
-        double r = Math.Sqrt(s/p);
-        double d = 2 * r;
-        double l = 2 * p * r;
-        Console.WriteLine(l);
-        Console.WriteLine(d);
-    }
+        
+        double p = 3.14;
 
+        double d = Math.Sqrt(4 * s / p);
+        double l = p * d;
+        Console.WriteLine(d);
+        Console.WriteLine(l);
+    }
+    //Begin16. Two points with the coordinates x1 and x2 are given on the real axis. Find
+    // the distance between these points: |x2 − x1|.
     public static void B16()
     {
         var x1 = double.Parse(Console.ReadLine());
         var x2 = double.Parse(Console.ReadLine());
         
-        Console.WriteLine("distance = " + Math.Abs(x2 - x1));
+        Console.WriteLine(Math.Abs(x2 - x1));
     }
-
+    //Begin17. Three points A, B, C are given on the real axis. Find the length of AC, the
+    // length of BC, and the sum of these lengths.
     public static void B17()
     {
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
         var c = double.Parse(Console.ReadLine());
-        Console.WriteLine(Math.Abs(c - a));
-        Console.WriteLine(Math.Abs(c - b));
-        Console.WriteLine(Math.Abs(a + b));
+        double d = Math.Abs(c - a);
+        double e = Math.Abs(c - b);
+        double f = Math.Abs(d + e);
+        Console.WriteLine(d);
+        Console.WriteLine(e);
+        Console.WriteLine(f);
     }
-
+    //Begin18. Three points A, B, C are given on the real axis, the point C is located
+    // between the points A and B. Find the product of the length of AC and the
+    // length of BC.
     public static void B18()
     {
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
         var c = double.Parse(Console.ReadLine());
-        Console.WriteLine(Math.Abs(c - a));
-        Console.WriteLine(Math.Abs(b - c));
-        Console.WriteLine(Math.Abs(a * b));
+        double d = (Math.Abs(c - a));
+        double e = (Math.Abs(b - c));
+        Console.WriteLine(d);
+        Console.WriteLine(e);
+        Console.WriteLine(Math.Abs(d * e));
     }
 
     public static void B19()
@@ -217,9 +249,7 @@ public class Beginner
         var a = double.Parse(Console.ReadLine());
         var b = double.Parse(Console.ReadLine());
 
-        double c = a;
-        a = b;
-        b = c;
+        (a, b) = (b, a);
         Console.WriteLine(a);
         Console.WriteLine(b);
 
