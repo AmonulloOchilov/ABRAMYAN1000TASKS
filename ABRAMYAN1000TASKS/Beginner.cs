@@ -195,7 +195,9 @@ public class Beginner
         Console.WriteLine(e);
         Console.WriteLine(Math.Abs(d * e));
     }
-
+    //Begin19. The coordinates (x1, y1) and (x2, y2) of two opposite vertices of a rectangle
+    // are given. Sides of the rectangle are parallel to coordinate axes. Find the
+    // perimeter and the area of the rectangle.
     public static void B19()
     {
         var x1 = double.Parse(Console.ReadLine());
@@ -211,25 +213,31 @@ public class Beginner
         Console.WriteLine(p);
         Console.WriteLine(s);
     }
-
+    //Begin20. The coordinates (x1, y1) and (x2, y2) of two points are given. Find the
+    // distance between the points:
+    // ((x2 − x1)2 + (y2 − y1)2)1/2
     public static void B20()
     {
         var x1 = double.Parse(Console.ReadLine());
-        var x2 = double.Parse(Console.ReadLine());
         var y1 = double.Parse(Console.ReadLine());
+        var x2 = double.Parse(Console.ReadLine());
         var y2 = double.Parse(Console.ReadLine());
         
         double p = Math.Sqrt(Math.Abs((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1)));
         Console.WriteLine(p);
     }
-
+    //Begin21. The coordinates (x1, y1), (x2, y2), (x3, y3) of the triangle vertices are given.
+    // Find the perimeter and the area of the triangle using the formula for distance
+    // between two points in the plane (see Begin20). The area of a triangle with
+    // sides a, b, c can be found by Heron’s formula:
+    // S = (p·(p − a)·(p − b)·(p − c))1/2
     public static void B21()
     {
         var x1 = double.Parse(Console.ReadLine());
-        var x2 = double.Parse(Console.ReadLine());
-        var x3 = double.Parse(Console.ReadLine());
         var y1 = double.Parse(Console.ReadLine());
+        var x2 = double.Parse(Console.ReadLine());
         var y2 = double.Parse(Console.ReadLine());
+        var x3 = double.Parse(Console.ReadLine());
         var y3 = double.Parse(Console.ReadLine());
         
         double a = Math.Sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
@@ -240,7 +248,6 @@ public class Beginner
         double S = Math.Sqrt(HalfPer*(HalfPer - a)*(HalfPer - b)*(HalfPer - c));
         
         Console.WriteLine(p);
-        Console.WriteLine(HalfPer);
         Console.WriteLine(S);
     }
 

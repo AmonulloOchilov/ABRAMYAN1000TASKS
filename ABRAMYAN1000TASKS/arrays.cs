@@ -254,4 +254,93 @@ public class arrays
             Console.WriteLine(a[i * k - 1]);
         }
     }
+    //Array12. An array A of N real numbers is given (N is an even number). Output array
+    // elements with even order numbers in ascending order of indices: A2, A4, A6, …,
+    // AN. Do not use conditional statements.
+
+    public static void arr12()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+        }
+
+        for (int i = 1; i < n; i+=2)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+        }
+    }
+    //Array13. An array A of N real numbers is given (N is an odd number). Output array
+    // elements with odd order numbers in descending order of indices: AN, AN−2,
+    // AN−4, …, A1. Do not use conditional statements.
+    public static void arr13()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+        }
+        for (int i = n-1; i < n; i-=2)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+        }
+    }
+    //Array14. An array A of N real numbers is given. Output array elements with even
+    // order numbers (in ascending order of indices) and then output array elements
+    // with odd order numbers (in ascending order of indices too):
+    // A2, A4, A6, …, A1, A3, A5, … .
+    public static void arr14()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+        }
+
+        for (int i = 1; i < n; i+=2)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+        }
+        
+        for (int i = 0; i < n; i+=2)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+        }
+    }
+    //Array15. An array A of N real numbers is given. Output array elements with odd
+    // order numbers in ascending order of indices and then output array elements
+    // with even order numbers in descending order of indices:
+    // A1, A3, A5, …, A6, A4, A2.
+    // Do not use conditional statements.
+    public static void arr15()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+        }
+            
+        for (int i = 0; i < n; i+=2)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+        }
+
+        for (int i = n-1; i >= 0; i-=2)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+        }
+    }
 }
