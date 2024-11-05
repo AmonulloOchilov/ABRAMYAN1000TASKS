@@ -343,4 +343,24 @@ public class arrays
             Console.WriteLine($"a{i + 1} = {arr[i]}");
         }
     }
+    //Array16. An array A of N real numbers is given. Output array elements as follows:
+    // A1, AN, A2, AN−1, A3, AN−2, … .
+    public static void arr16()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            int y = int.Parse(Console.ReadLine());
+            arr[i] = y;
+        }
+        for (int i = 0; i < (n + 1) / 2; i++)
+        {
+            Console.WriteLine($"a{i + 1} = {arr[i]}");
+            if (i != n - 1 - i)
+            {
+                Console.WriteLine($"a{n - i} = {arr[n - 1 - i]}");
+            }
+        }
+    }
 }
