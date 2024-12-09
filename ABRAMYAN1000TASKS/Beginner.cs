@@ -290,9 +290,9 @@ public class Beginner
         var c = double.Parse(Console.ReadLine());
         double d = a;
 
-        a = b;
-        b = c;
-        c = d;
+        a = c;
+        c = b;
+        b = d;
         
         Console.WriteLine(a);
         Console.WriteLine(b);
@@ -308,9 +308,9 @@ public class Beginner
         var c = double.Parse(Console.ReadLine());
         double d = a;
 
-        a = c;
-        c = b;
-        b = d;
+        a = b;
+        b = c;
+        c = d;
         
         Console.WriteLine(a);
         Console.WriteLine(b);
