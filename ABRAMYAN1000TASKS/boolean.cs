@@ -2,7 +2,6 @@ namespace ABRAMYAN1000TASKS;
 
 public class boolean
 {
-    
     //Given integer A, verify the following proposition: ―The number A is
     // positive‖
     public static void bool1()
@@ -14,8 +13,6 @@ public class boolean
     }
     //Given integer A, verify the following proposition: ―The number A is
     // odd‖
-    
-
     public static void bool2()
     {
         var a = double.Parse(Console.ReadLine());
@@ -60,20 +57,17 @@ public class boolean
     }
     //Given three integers A, B, C, verify the following proposition: ―The
     // double inequality A < B < C is fulfilled‖
-    
     public static void bool6()
     {
         int a = int.Parse(Console.ReadLine());
         int b = int.Parse(Console.ReadLine());
         int c = int.Parse(Console.ReadLine());
 
-        bool d = a < b;
-        bool e = b < c;
-        Console.WriteLine(e);
+        bool d = a < b && b < c;
+        Console.WriteLine(d);
     }
     //Given three integers A, B, C, verify the following proposition: ―The
-    // number B is between A and C‖
-
+    // number B is between A and C
     public static void bool7()
     {
         int a = int.Parse(Console.ReadLine());
@@ -83,23 +77,18 @@ public class boolean
         bool d = a < b && b < c;
         Console.WriteLine(d);
     }
-    
     //Given two integers A and B, verify the following proposition: ―Each of
-    // the numbers A and B is odd‖
-
+    // the numbers A and B is odd
     public static void bool8()
     {
         int a = int.Parse(Console.ReadLine());
         int b = int.Parse(Console.ReadLine());
 
-        bool c = a % 2 != 0;
-        bool d = b % 2 != 0;
+        bool c = a % 2 != 0 && b % 2 != 0;
         Console.WriteLine(c);
-        Console.WriteLine(d);
     }
     //Given two integers A and B, verify the following proposition: ―At least
-    // one of the numbers A and B is odd‖
-
+    // one of the numbers A and B is odd
     public static void bool9()
     {
         int a = int.Parse(Console.ReadLine());
@@ -108,18 +97,16 @@ public class boolean
         bool c = a % 2 != 0 || b % 2 != 0;
         Console.WriteLine(c);
     }
-    
     //Given two integers A and B, verify the following proposition: ―Exactly
     // one of the numbers A and B is odd‖
     public static void bool10()
     {
         int a = int.Parse(Console.ReadLine());
         int b = int.Parse(Console.ReadLine());
-
+        
         bool c = (a % 2 != 0) != (b % 2 != 0);
         Console.WriteLine(c);
     }
-
     //Given two integers A and B, verify the following proposition: ―The
     // numbers A and B have equal parity‖
     public static void bool11()
@@ -129,17 +116,15 @@ public class boolean
         bool c = (a % 2 == 0 && b % 2 == 0) || (a % 2 != 0 && b % 2 != 0);
         Console.WriteLine(c);
     }
-    
     //Given three integers A, B, C, verify the following proposition: ―Each of
     // the numbers A, B, C is positive‖
-
     public static void bool12()
     {
         var a = int.Parse(Console.ReadLine());
         var b = int.Parse(Console.ReadLine());
         var c = int.Parse(Console.ReadLine());
-        
-        bool d = a>0 && b>0 && c>0;
+
+        bool d = a > 0 && b > 0 && c > 0;
         Console.WriteLine(d);
     }
     //Given three integers A, B, C, verify the following proposition: ―At least
@@ -165,7 +150,7 @@ public class boolean
         Console.WriteLine(d);
     }
     //Given three integers A, B, C, verify the following proposition: ―Exactly
-    // two of the numbers A, B, C are positive‖
+    // two of the numbers A, B, C are positive
     public static void bool15()
     {
         var a = int.Parse(Console.ReadLine());
@@ -213,28 +198,27 @@ public class boolean
         bool d = (a == -b) || (b == -c) || (c == -a) || (a == -c);
         Console.WriteLine(d);
     }
-    
     //Given a three-digit integer, verify the following proposition: ―All digits
     // of the number are different‖
     public static void bool20()
     {
         var a = int.Parse(Console.ReadLine());
-        var b = int.Parse(Console.ReadLine());
-        var c = int.Parse(Console.ReadLine());
-        
-        bool d = (a != b) && (b != c) && (c != a);
-        Console.WriteLine(d);
+        int h = a / 100;
+        int t = (a / 10) % 10;
+        int o = a % 10;
+        bool b = (h != t && t != o && o != h);
+        Console.WriteLine(b);
     }
     //Given a three-digit integer, verify the following proposition: ―All digits
     // of the number are in ascending order‖
     public static void bool21()
     {
         var a = int.Parse(Console.ReadLine());
-        var b = int.Parse(Console.ReadLine());
-        var c = int.Parse(Console.ReadLine());
-
-        bool d = (a <= b && b <= c);
-        Console.WriteLine(d);
+        int h = a / 100;
+        int t = (a / 10) % 10;
+        int o = a % 10;
+        bool b = (h < t && t < o);
+        Console.WriteLine(b);
     }
     //Given a three-digit integer, verify the following proposition: ―All digits
     // of the number are in ascending or descending order‖
@@ -247,7 +231,7 @@ public class boolean
         int o = a % 10; //ones
 
         bool ac = (h < t && t < o);
-        bool dc = (h > t && t > 0);
+        bool dc = (h > t && t > o);
         Console.WriteLine(ac || dc);
     }
     //Given a four-digit integer, verify the following proposition: ―The
@@ -265,10 +249,8 @@ public class boolean
         Console.WriteLine(eq);
     }
     //Three real numbers A, B, C are given (A is not equal to 0). By means of
-    // a discriminant D = B2
-    // − 4·A·C, verify the following proposition: ―The
-    // quadratic equation A·x
-    // 2 + B·x + C = 0 has real roots‖
+    // a discriminant D = B2 − 4·A·C, verify the following proposition: ―The
+    // quadratic equation A·x2 + B·x + C = 0 has real roots‖
     public static void bool24()
     {
         var a = int.Parse(Console.ReadLine());
@@ -280,7 +262,7 @@ public class boolean
         Console.WriteLine(f);
     }
     //Given two real numbers x, y, verify the following proposition: ―The
-    // point with coordinates (x, y) is in the second coordinate quarter‖
+    // point with coordinates (x, y) is in the second coordinate quarter
     public static void bool25()
     {
         var x = int.Parse(Console.ReadLine());
@@ -330,10 +312,12 @@ public class boolean
         var y1 = int.Parse(Console.ReadLine());
         var x2 = int.Parse(Console.ReadLine());
         var y2 = int.Parse(Console.ReadLine());
-        
-        bool isInside = (Math.Min(x1, x2) < x && x < Math.Max(x1, x2) && Math.Min(y1, y2) < y && y < Math.Max(y1, y2));
-        Console.WriteLine(isInside);
+
+        bool z = ((x1 <= x && x <= x2) && (y1 <= y && y <= y2)) 
+                 || ((x2 <= x && x <= x1) && (y2 <= y && y <= y1));
+        Console.WriteLine(z);
     }
+    
     //Given three integers a, b, c that are the sides of a triangle, verify the
     // following proposition: ―The triangle with sides a, b, c is equilateral‖
     public static void bool30()
@@ -346,7 +330,7 @@ public class boolean
         Console.WriteLine(f);
     }
     //Given three integers a, b, c that are the sides of a triangle, verify the
-    // following proposition: ―The triangle with sides a, b, c is isosceles‖
+    // following proposition: ―The triangle with sides a, b, c is isosceles
     public static void bool31()
     {
         var a = int.Parse(Console.ReadLine());
@@ -357,7 +341,7 @@ public class boolean
         Console.WriteLine(f);
     }
     //Given three integers a, b, c that are the sides of a triangle, verify the
-    // following proposition: ―The triangle with sides a, b, c is a right triangle‖
+    // following proposition: ―The triangle with sides a, b, c is a right triangle
     public static void bool32()
     {
         var a = int.Parse(Console.ReadLine());
@@ -379,8 +363,7 @@ public class boolean
         Console.WriteLine(d);
     }
     //Given coordinates x, y of a chessboard square (as integers in the range 1
-    // to 8), verify the following proposition: ―The chessboard square (x, y) is white‖
-    // .
+    // to 8), verify the following proposition: ―The chessboard square (x, y) is white.
     // Note that the left bottom square (1, 1) is black
     public static void bool34()
     {
@@ -426,7 +409,11 @@ public class boolean
         var x2 = int.Parse(Console.ReadLine());
         var y2 = int.Parse(Console.ReadLine());
 
-        bool f = Math.Abs(x1 - x2) <= 1 && Math.Abs(y1 - y2) <= 1;
+        bool f = (x2 == x1 + 1 && y2 == y1) || (x2 == x1 - 1 && y2 == y1) ||  
+                 (x2 == x1 && y2 == y1 + 1) || (x2 == x1 && y2 == y1 - 1) ||  
+                 (x2 == x1 + 1 && y2 == y1 + 1) || (x2 == x1 + 1 && y2 == y1 - 1) ||  
+                 (x2 == x1 - 1 && y2 == y1 + 1) || (x2 == x1 - 1 && y2 == y1 - 1);    
+
         Console.WriteLine(f);
     }
     //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
@@ -439,7 +426,7 @@ public class boolean
         var x2 = int.Parse(Console.ReadLine());
         var y2 = int.Parse(Console.ReadLine());
         
-        bool f = Math.Abs(x1 - x2) == Math.Abs(y1 - y2);
+        bool f = Math.Abs(x2 - x1) == Math.Abs(y2 - y1);
         Console.WriteLine(f);
     }
     //Given coordinates x1, y1, x2, y2 of two chessboard squares (as integers in
